@@ -1,5 +1,5 @@
 package sort
-
+//计数排序
 fun countingSort(a: IntArray): IntArray {
     var temp = IntArray(100);
     for (item in a) {
