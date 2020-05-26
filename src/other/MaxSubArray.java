@@ -1,3 +1,5 @@
+package other;
+
 public class MaxSubArray {
 
     public static int maxSubArray(int[] nums) {

@@ -1,3 +1,5 @@
+package other;
+
 public class Permutation {
 
     public static int[] permutation(int[] a, int i) {

@@ -1,3 +1,5 @@
+package other;
+
 public class NineNineMul {
 
     public static void main(String[] args) {

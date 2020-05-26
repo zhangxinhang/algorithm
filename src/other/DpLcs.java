@@ -1,3 +1,5 @@
+package other;
+
 public class DpLcs {
 
     public static int dplcs(String a, String b) {
