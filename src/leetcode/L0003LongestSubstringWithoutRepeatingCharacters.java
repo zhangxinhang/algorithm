@@ -30,7 +30,6 @@ import java.util.Map;
 public class L0003LongestSubstringWithoutRepeatingCharacters {
     /**
      * 遇到重复字符时，从第一次出现字符的位置重新开始。
-     * TODO 可以在遇到重复字符时，保留之前的数据
      *
      * @param str
      * @return
