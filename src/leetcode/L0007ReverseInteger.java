@@ -38,7 +38,7 @@ public class L0007ReverseInteger {
             temp += list.get(i) * Math.pow(10, len - 1 - i);
         }
         if (!isPositive) {
-            temp = 0 - temp;
+            temp = -temp;
         }
         return temp;
     }
