@@ -1,4 +1,4 @@
-package leetcode;
+package old;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -28,15 +28,18 @@ public class L0001TwoSum {
             if (numMap.containsKey(need)) {
                 ret[0] = i;
                 ret[1] = numMap.get(need);
-                break;
+                if (ret[0] != ret[1]) {
+                    break;
+                }
+
             }
         }
         return ret;
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{2, 7, 11, 15};
-        int target = 13;
+        int[] nums = new int[]{3, 2, 4};
+        int target = 6;
         int[] ret = twoSum(nums, target);
         Arrays.stream(ret).forEach(System.out::println);
     }
