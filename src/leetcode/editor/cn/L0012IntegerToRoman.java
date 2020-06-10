@@ -54,9 +54,6 @@ package leetcode.editor.cn;
 //解释: M = 1, CM = 9, XC = 9, IV = 4.
 // Related Topics 数学 字符串
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class L0012IntegerToRoman {
     public static void main(String[] args) {
         Solution solution = new L0012IntegerToRoman().new Solution();
@@ -66,73 +63,21 @@ public class L0012IntegerToRoman {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         //罗马数字包含以下七种字符： I， V， X， L，C，D 和 M。
-        Map<Integer, String> map = new HashMap<>();
-        Map<Integer, String> map1 = new HashMap<>();
-        Map<Integer, String> map2 = new HashMap<>();
-        Map<Integer, String> map3 = new HashMap<>();
-
-        void initMap() {
-            map.put(1, "I");
-            map.put(2, "II");
-            map.put(3, "III");
-            map.put(4, "IV");
-            map.put(5, "V");
-            map.put(6, "VI");
-            map.put(7, "VII");
-            map.put(8, "VIII");
-            map.put(9, "IX");
-
-            map1.put(1, "X");
-            map1.put(2, "XX");
-            map1.put(3, "XXX");
-            map1.put(4, "XL");
-            map1.put(5, "L");
-            map1.put(6, "LX");
-            map1.put(7, "LXX");
-            map1.put(8, "LXXX");
-            map1.put(9, "XC");
-
-            map2.put(1, "C");
-            map2.put(2, "CC");
-            map2.put(3, "CCC");
-            map2.put(4, "CD");
-            map2.put(5, "D");
-            map2.put(6, "DC");
-            map2.put(7, "DCC");
-            map2.put(8, "DCCC");
-            map2.put(9, "CM");
-
-            map3.put(1, "M");
-            map3.put(2, "MM");
-            map3.put(3, "MMM");
-        }
-
 
         public String intToRoman(int num) {
-            initMap();
-            StringBuilder sb = new StringBuilder();
-            if (num >= 1000) {
-                int a3 = num / 1000;
-                num = num % 1000;
-                sb.append(map3.get(a3));
+            String symbol[] = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+            int value[] = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+            String result = "";
+            for (int i = 0; i < symbol.length; i++) {
+                while (num >= value[i]) {
+                    num -= value[i];
+                    result += symbol[i];
+                }
             }
-            if (num >= 100) {
-                int a2 = num / 100;
-                num = num % 100;
-                sb.append(map2.get(a2));
-            }
-            if (num >= 10) {
-                int a1 = num / 10;
-                num = num % 10;
-                sb.append(map1.get(a1));
-            }
-            if (num > 0) {
-                int a0 = num;
-                sb.append(map.get(a0));
-            }
-
-            return sb.toString();
+            return result;
         }
+
+
     }
 //leetcode submit region end(Prohibit modification and deletion)
 
