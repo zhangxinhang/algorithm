@@ -17,11 +17,11 @@ fun countingSort(a: IntArray): IntArray {
 }
 
 fun main(args: Array<String>) {
-    var temp = IntArray(10000);
+    val temp = IntArray(10000);
     for (i in 0..9999) {
         temp[i] = (1..99).shuffled().last();
     }
-    var re = countingSort(temp)
+    val re = countingSort(temp)
     print(re)
     for (item in re.indices) {
         if (item % 100 == 0) {
