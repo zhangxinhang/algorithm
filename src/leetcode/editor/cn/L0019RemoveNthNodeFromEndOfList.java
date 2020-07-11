@@ -18,6 +18,8 @@ package leetcode.editor.cn;
 // Related Topics 链表 双指针 
 // 👍 881 👎 0
 
+import leetcode.editor.cn.common.ListNode;
+
 public class L0019RemoveNthNodeFromEndOfList {
     public static void main(String[] args) {
         Solution solution = new L0019RemoveNthNodeFromEndOfList().new Solution();
@@ -35,14 +37,6 @@ public class L0019RemoveNthNodeFromEndOfList {
         }
     }
 
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     //leetcode submit region begin(Prohibit modification and deletion)
 
