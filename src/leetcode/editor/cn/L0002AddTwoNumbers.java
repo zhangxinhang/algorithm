@@ -13,6 +13,8 @@ package leetcode.editor.cn;
 // 
 // Related Topics 链表 数学
 
+import leetcode.editor.cn.common.ListNode;
+
 import java.util.Objects;
 
 public class L0002AddTwoNumbers {
@@ -22,14 +24,7 @@ public class L0002AddTwoNumbers {
 
     }
 
-    public class ListNode {
-        int val;
-        ListNode next;
 
-        ListNode(int x) {
-            val = x;
-        }
-    }
     //leetcode submit region begin(Prohibit modification and deletion)
 
     /**
